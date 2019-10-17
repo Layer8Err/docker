@@ -10,7 +10,7 @@ sudo apt update
 sudo apt install docker-ce
 
 # Allow $USER to run Docker commands without sudo
-sudo usermod -aG docker $USER
+sudo usermod -a -G docker $USER
 sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
 sudo chown g+rwx "$HOME/.docker" -R
 
