@@ -14,7 +14,8 @@ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian buster stable"
 sudo apt update
 sudo apt install -y docker-ce docker-ce-cli
-
+# Weird bit for WSL2
+sudo touch /etc/fstab
 # Allow $USER to run Docker commands without sudo
 sudo usermod -a -G docker $USER
 sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
